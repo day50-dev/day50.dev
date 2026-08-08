@@ -19,8 +19,8 @@
       <nav class="container">
         <a class="wordmark" href="#top"><span>DA`/50</span></a>
         <ul>
-          <li><a href="#start">Start here</a></li>
-          <li><a href="#stack">The stack</a></li>
+          <li><a href="#start">Start</a></li>
+          <li><a href="#stack">Stack</a></li>
           <li><a href="#cabinet">Cabinet</a></li>
           <li><a href="mas.html">MAS</a></li>
           <li><a href="//github.com/day50-dev">GitHub</a></li>
@@ -34,10 +34,10 @@
           <p class="kicker">DA`/50 · open-source · local-first</p>
           <h1>Run commodified intelligence<br />at industrial volume.</h1>
           <p class="lede">
-            Intelligence has become a commodity — cheap, abundant, interchangeable.
+            Intelligence has become a commodity: cheap, abundant, interchangeable.
             That makes it a pipeline problem, not an app problem. Fifty-cent models at
             ten-billion-token scale need plumbing that is stateless, composable, and
-            controllable. day50 builds that plumbing: a unix-grade call layer, memory
+            controllable. DA`/50 is that plumbing: a unix-grade call layer, memory
             that travels between context windows, agents with real control flow, and
             spend that cannot overshoot.
           </p>
@@ -76,7 +76,7 @@
               <p class="kicker accent">The front door</p>
               <h2>llcat — <span class="mono">/usr/bin/cat</span> for LLMs</h2>
               <p>
-                The lowest common denominator of the whole stack. One stateless,
+                An introduction. One stateless,
                 transparent command that talks to <em>any</em> OpenAI-compatible
                 endpoint — OpenRouter, Ollama, llama.cpp, sglang — with nothing
                 installed beyond the tool itself.
@@ -120,8 +120,8 @@
     qwen/qwen3-235b-a22b
     meta-llama/llama-3.3-70b
 
-<span class="t-acc">$</span> llcat -k @credentials.txt:0 -m @models.txt:2 \
-    "evaluate this prompt against 40 models, in parallel"
+<span class="t-acc">$</span> for i in {0..40}; do llcat -k @credentials.json:.[1].password -m @models.txt:$i \
+    "evaluate this prompt against 40 models, in parallel"; done
   → 40 responses, 3 servers, one line</code></pre>
             </div>
           </div>
