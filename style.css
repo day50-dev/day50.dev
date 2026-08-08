@@ -447,6 +447,76 @@ footer {
   font-size: 0.85rem;
 }
 
+.doc {
+  padding: 56px 0 72px;
+}
+
+.doc .container {
+  max-width: 780px;
+}
+
+.doc h1 {
+  font-family: var(--display);
+  font-weight: 400;
+  font-size: clamp(1.6rem, 3vw, 2.2rem);
+  line-height: 1.15;
+  margin: 0 0 8px;
+}
+
+.doc .meta {
+  color: var(--muted);
+  font-size: 0.85rem;
+  margin: 0 0 32px;
+}
+
+.doc h2 {
+  font-family: var(--display);
+  font-weight: 400;
+  font-size: 1.3rem;
+  color: var(--accent);
+  margin: 40px 0 12px;
+  padding-top: 18px;
+  border-top: 1px solid var(--border);
+}
+
+.doc h3 {
+  font-size: 1rem;
+  color: var(--text);
+  margin: 28px 0 8px;
+}
+
+.doc p {
+  color: var(--muted);
+}
+
+.doc ul,
+.doc ol {
+  color: var(--muted);
+}
+
+.doc li {
+  margin-bottom: 6px;
+}
+
+.doc pre {
+  background: #0a0c0f;
+  border: 1px solid var(--border);
+  border-radius: 6px;
+  padding: 14px 16px;
+  overflow-x: auto;
+  margin: 16px 0;
+}
+
+.doc code {
+  font-family: var(--mono);
+  font-size: 0.85em;
+  color: var(--amber);
+}
+
+.doc pre code {
+  color: var(--text);
+}
+
 footer p {
   margin: 4px 0;
 }
